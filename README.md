@@ -61,6 +61,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
+## Note Specification
+
+Php 7.4
+Laravel 8
+Laravel Jetstream
+laravel Spatie Role Permission
+
 ## Integartion
 
 This System Laravel 8 Intration Jetstream and Spatie Laravel Permision
@@ -72,6 +79,8 @@ This System Laravel 8 Intration Jetstream and Spatie Laravel Permision
     - composer install
     - npm install && npm run dev
     - open This sourcode in your Code Editor
+    - change name .env.example to .env
+    - change name DB_DATABASE=your_name
     - php artisan migrate
     - php artisan db:seed
     - Done : php artisan serve
