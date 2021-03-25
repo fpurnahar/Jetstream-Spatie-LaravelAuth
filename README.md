@@ -63,14 +63,10 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Note Specification
 
-Php 7.4
-Laravel 8
-Laravel Jetstream
-laravel Spatie Role Permission
-
-## Integartion
-
-This System Laravel 8 Intration Jetstream and Spatie Laravel Permision
+-   Php 7.4
+-   Laravel 8
+-   Laravel Jetstream
+-   laravel Spatie Role Permission
 
 ## installation
 
