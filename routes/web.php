@@ -4,7 +4,6 @@ use App\Http\Controllers\Admin;
 use App\Http\Controllers\LoginResponse;
 use App\Http\Controllers\SuperAdmin;
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,13 +19,17 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/profile', function () {
+    return view('admin.profileInformation');
+});
 
-
-Route::middleware(['auth', 'second'])->group(function () {
+Route::Group(['middleware' => 'auth'], function () {
     Route::get('/redirect', [LoginResponse::class, 'index'])->name('redirect');
     Route::get('/super_admin', [SuperAdmin::class, 'index'])->middleware('superAdmin')->name('superAdmin');
     Route::get('/admin', [Admin::class, 'index'])->middleware('admin')->name('admin');
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->middleware('user')->name('dashboard');
+    Route::group(['middleware' => 'auth'], function () {
+        Route::get('/dashboard', function () {
+            return view('dashboard');
+        });
+    });
 });

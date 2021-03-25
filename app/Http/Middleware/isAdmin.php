@@ -18,8 +18,8 @@ class isAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        $roleAccess = Auth::user();
-        if ($roleAccess->hasRole('super_admin')) {
+        $CheckRole = Auth::user();
+        if ($CheckRole->hasRole('admin')) {
             return $next($request);
         } else {
             App::abort(404);

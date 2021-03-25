@@ -13,7 +13,7 @@ class SuperAdmin extends Controller
      */
     public function index()
     {
-        return view('adminSuper.dashboard');
+        return view('admin.SuperAdminDashboard');
     }
 
     /**
